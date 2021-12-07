@@ -4,7 +4,7 @@ const { dbConfig } = require('../config');
 const getcar = async (id) => {
   try {
     const con = await mysql.createConnection(dbConfig);
-    const [car] = await con.execute('SELECT * FROM cars WHERE id = ?', [id]); // su klaustuku prepared statement
+    const [car] = await con.execute('SELECT * FROM Cars WHERE id = ?', [id]); // su klaustuku prepared statement
     await con.end();
     return car;
   //  res.status(200).json(car);
@@ -16,7 +16,7 @@ const getcar = async (id) => {
 const getcars = async () => {
   try {
     const con = await mysql.createConnection(dbConfig);
-    const [cars] = await con.execute('SELECT * FROM cars');
+    const [cars] = await con.execute('SELECT * FROM Cars');
     await con.end();
     return cars;
   } catch (e) {
@@ -27,7 +27,7 @@ const getcars = async () => {
 const createcar = async (newcar) => {
   try {
     const con = await mysql.createConnection(dbConfig);
-    const [newcarCreated] = await con.execute('INSERT INTO cars (make, model, year, plateNo, owner_id) VALUES(?, ?, ?, ?, ?)', [newcar.make, newcar.model, newcar.year, newcar.plateNo, newcar.owner_id]);
+    const [newcarCreated] = await con.execute('INSERT INTO Cars (make, model, year, plateNo, owner_id) VALUES(?, ?, ?, ?, ?)', [newcar.make, newcar.model, newcar.year, newcar.plateNo, newcar.owner_id]);
     await con.end();
     return newcarCreated;
   } catch (e) {
@@ -38,7 +38,7 @@ const createcar = async (newcar) => {
 const deletecar = async (id) => {
   try {
     const con = await mysql.createConnection(dbConfig);
-    const [car] = await con.execute('DELETE FROM cars WHERE id = ?', [id]); // su klaustuku prepared statement
+    const [car] = await con.execute('DELETE FROM Cars WHERE id = ?', [id]); // su klaustuku prepared statement
     await con.end();
     return car;
   } catch (e) {
@@ -46,10 +46,11 @@ const deletecar = async (id) => {
   }
 };
 
-const UpdateOwnerId = async (owner_Id, id) => {
+const UpdateOwnerId = async (owner, id) => {
   try {
     const con = await mysql.createConnection(dbConfig);
-    const [car] = await con.execute('UPDATE cars SET owner_id = ? WHERE id = ?', [owner_Id, id]); // su klaustuku prepared statement
+    console.log(id, owner);
+    const [car] = await con.execute('UPDATE Cars SET owner_id = ? WHERE id = ?', [owner, id]); // su klaustuku prepared statement
     await con.end();
     return car;
   } catch (e) {

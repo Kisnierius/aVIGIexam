@@ -27,6 +27,7 @@ const handleCreatecar = async (req, res) => {
   try {
     const newcar = req.body;
     const newcarCreated = await carsEntity.createcar(newcar);
+    console.log(newcarCreated);
     res.send(newcarCreated);
   } catch (e) {
     console.log(e);
@@ -46,8 +47,10 @@ const handleDeletecar = async (req, res) => {
 const handleUpdateOwnerId = async (req, res) => {
   try {
     const { id } = req.params;
-    const { owner_Id } = req.params;
-    const car = await carsEntity.UpdateOwnerId(id, owner_Id);
+    console.log(id);
+    const { owner_id } = req.body;
+    console.log(owner_id);
+    const car = await carsEntity.UpdateOwnerId(owner_id, id);
     res.send(car);
   } catch (e) {
     console.log(e);
