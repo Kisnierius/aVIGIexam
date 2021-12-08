@@ -44,23 +44,6 @@ const handleDeletepart = async (req, res) => {
   }
 };
 
-// const handleUpdatepartContacts = async (req, res) => {
-//   try {
-//     const { id } = req.params;
-//     console.log(id);
-//     const { email } = req.body;
-//     const { phone } = req.body;
-//     console.log(email);
-//     console.log(phone);
-//     const partContacts = { email, phone };
-//     console.log('line54router');
-//     console.log(partContacts);
-//     const part = await partsEntity.UpdatepartContacts(partContacts, id);
-//     res.send(part);
-//   } catch (e) {
-//     console.log(e);
-//   }
-// };
 
 const handleGetpartsRepair = async (req, res) => {
   try {
@@ -76,7 +59,6 @@ const handleGetpartsRepair = async (req, res) => {
 router.get('/parts', handleGetparts);
 router.get('/parts/:id', handleGetpart);
 router.delete('/parts/:id', handleDeletepart);
-// router.post('/parts/:id', handleUpdatepartContacts);
 router.post('/parts', handleCreatepart);
 router.get('/partsrepairs/:id', handleGetpartsRepair); // Repair ID
 

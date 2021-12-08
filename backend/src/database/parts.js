@@ -45,7 +45,6 @@ const deletepart = async (id) => {
   }
 };
 
-
 const getpartRepairs = async (id) => {
   try {
     const con = await mysql.createConnection(dbConfig);
@@ -63,6 +62,5 @@ module.exports = {
   getparts,
   createpart,
   deletepart,
-//   UpdatepartContacts,
   getpartRepairs,
 };

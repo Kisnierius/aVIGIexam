@@ -1,5 +1,3 @@
-/////////  NEBAIGTA!!!!!
-
 const express = require('express');
 const repairsEntity = require('../database/repairs');
 
@@ -46,23 +44,6 @@ const handleDeleterepair = async (req, res) => {
   }
 };
 
-// const handleUpdaterepairContacts = async (req, res) => {
-//   try {
-//     const { id } = req.params;
-//     console.log(id);
-//     const { email } = req.body;
-//     const { phone } = req.body;
-//     console.log(email);
-//     console.log(phone);
-//     const repairContacts = { email, phone };
-//     console.log('line54router');
-//     console.log(repairContacts);
-//     const repair = await repairsEntity.UpdaterepairContacts(repairContacts, id);
-//     res.send(repair);
-//   } catch (e) {
-//     console.log(e);
-//   }
-// };
 
 const handleGetrepairsCar = async (req, res) => {
   try {
@@ -78,7 +59,6 @@ const handleGetrepairsCar = async (req, res) => {
 router.get('/repairs', handleGetrepairs);
 router.get('/repairs/:id', handleGetrepair);
 router.delete('/repairs/:id', handleDeleterepair);
-// router.post('/repairs/:id', handleUpdaterepairContacts);
 router.post('/repairs', handleCreaterepair);
 router.get('/repairscars/:id', handleGetrepairsCar); // CAR ID
 

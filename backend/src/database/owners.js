@@ -49,7 +49,7 @@ const UpdateOwnerContacts = async (ownerContacts, id) => {
   try {
     const con = await mysql.createConnection(dbConfig);
     console.log(id, ownerContacts);
-    const email = ownerContacts.email;
+    const { email } = ownerContacts;
     const [owner] = await con.execute('UPDATE Owner SET email = ? WHERE id = ?', [email, id]); // su klaustuku prepared statement
     await con.end();
     return owner;
