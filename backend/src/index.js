@@ -4,7 +4,7 @@ const carsRouter = require('./routes/cars');
 const UsersRouter = require('./routes/users');
 const ownersRouter = require('./routes/owners');
 // const repairsRouter = require('./routes/repairs');
-// const partsRouter = require('./routes/parts');
+const partsRouter = require('./routes/parts');
 
 const { portCon } = require('./config');
 
@@ -15,7 +15,7 @@ app.use(cors());
 app.use(carsRouter);
 app.use(ownersRouter);
 // app.use(repairsRouter);
-// app.use(partsRouter);
+app.use(partsRouter);
 app.use(UsersRouter);
 
 app.get('/', (req, res) => {
