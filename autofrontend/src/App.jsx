@@ -1,0 +1,30 @@
+import React from "react";
+import "./App.scss";
+import AllCars from "./pages/Allcars"
+import { Routes, Route } from 'react-router';
+// import Login from './components/login';
+//import Register from './components/register';
+// import { useContext } from 'react';
+// import { AuthProvider } from './context/auth';
+
+function App() {
+
+  return (
+    
+      <div >
+        <Routes>
+        <Route path="/" element={<AllCars />} />
+          {/* <Route path="/Login" element={<Login />} /> */}
+          {/* <Route path="/Register" element={<Register />} /> */}
+        </Routes>
+      </div>
+  
+  );
+}
+
+
+
+
+
+
+export default App;
