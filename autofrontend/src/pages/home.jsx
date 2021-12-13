@@ -7,6 +7,8 @@ function Home() {
         <>
             <Link to='Allcars'>All cars serviced in the company</Link>
             <Link to='carHistory'>Repair History</Link>
+            <Link to='loginPage'>Sign in</Link>
+            <Link to='registerPage'>Register</Link>
         </>
     );
 }

@@ -4,19 +4,19 @@ import Cars from '../components/carDiv';
 import "milligram";
 // import { Link } from 'react-router-dom';
 
-
 function AllCars() {
 
     return (
-        ReactDOM.render(
+<div>
+        
 
             <React.StrictMode>
 
                 <Cars />
             </React.StrictMode>,
-            document.getElementById('root')
-        )
+           
+        </div>
     );
 }
 
-    export default AllCars;
+export default AllCars;

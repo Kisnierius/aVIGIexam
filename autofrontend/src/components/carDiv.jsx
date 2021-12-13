@@ -3,7 +3,7 @@ import "./carDiv.css";
 import "milligram";
 
 //////////
-const Repair = ({plateNo, id, create_time, repair_title, repair_comment, part_title, part_comment, email })  => {
+const Repair = ({ plateNo, id, create_time, repair_title, repair_comment, part_title, part_comment, email }) => {
   return (
     <div className="repairDIV">
       <h2>{plateNo}</h2>
@@ -21,12 +21,12 @@ const Repair = ({plateNo, id, create_time, repair_title, repair_comment, part_ti
 const Repairs = (id) => {
   const [repairs, setRepairs] = useState([]);
 
-   const  fetchRepairs = async () => {
-        await fetch(`http://127.0.0.1:5000/repairscars/${id}`)
-             .then(response => response.json())
-             .then(data => setRepairs(data));
-            console.log(repairs)
-     };
+  const fetchRepairs = async () => {
+    await fetch(`http://127.0.0.1:5000/repairscars/${id}`)
+      .then(response => response.json())
+      .then(data => setRepairs(data));
+    console.log(repairs)
+  };
 
   useEffect(() => {
     fetchRepairs();
@@ -34,12 +34,11 @@ const Repairs = (id) => {
 
   return (
     <div className="flex flex-wrap">
-  
+
       {repairs.length > 0
         ? repairs.map((repair) => (
-            <Repair plateNo={repair.plateNo} id={repair.id} create_time={repair.create_time} repair_title={repair.repair_title} repair_comment={repair.repair_comment} part_title={repair.part_title} part_comment={repair.part_comment} email={repair.email} />
-            //plateNo, id, create_time, repair_title, repair_comment part_title, part_comment, email
-          ))
+          <Repair plateNo={repair.plateNo} id={repair.id} create_time={repair.create_time} repair_title={repair.repair_title} repair_comment={repair.repair_comment} part_title={repair.part_title} part_comment={repair.part_comment} email={repair.email} />
+        ))
         : "Loading..."}
     </div>
   );
@@ -47,18 +46,17 @@ const Repairs = (id) => {
 
 ///////////
 
-
-const  Car = ({ make, model, year, plateNo, id })  => {
+const Car = ({ make, model, year, plateNo, id }) => {
   return (
     <div className="carDIV">
-      <h2>{plateNo}</h2>
+      <h3>{plateNo}</h3>
       <p>{make}</p>
       <p>{model}</p>
       <p>{year}</p>
       <p>view car history <button
-      onClick={() => Repairs({id})}
+        onClick={Repairs}
       >{id}</button></p>
-      
+
     </div>
   );
 };
@@ -67,29 +65,32 @@ const  Car = ({ make, model, year, plateNo, id })  => {
 const Cars = () => {
   const [cars, setCars] = useState([]);
 
-   const  fetchCars = async () => {
-        await fetch('http://127.0.0.1:5000/cars')
-             .then(response => response.json())
-             .then(data => setCars(data));
-            console.log(cars)
-     };
- 
+  const fetchCars = async () => {
+    await fetch('http://127.0.0.1:5000/cars')
+      .then(response => response.json())
+      .then(data => setCars(data));
+    console.log(cars)
+  };
+
 
 
   useEffect(() => {
-      fetchCars();
+    fetchCars();
   }, []);
 
   return (
+    <div>
+      <h2 className="pageTitle">All Cars serviced in the company</h2>
     <div className="flex flex-wrap">
-  
+
       {cars.length > 0
         ? cars.map((car) => (
-            <Car id={car.id} make={car.make} model={car.model} year={car.year} plateNo={car.plateNo} />
-            
-          ))
+          <Car id={car.id} make={car.make} model={car.model} year={car.year} plateNo={car.plateNo} />
+
+        ))
         : "Loading..."}
-       
+
+    </div>
     </div>
   );
 };

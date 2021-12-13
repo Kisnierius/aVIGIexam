@@ -1,4 +1,4 @@
-/////////EXAMPLE
+
 
 // import "./style.scss";
 // import Register from "./register";

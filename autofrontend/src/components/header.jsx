@@ -1,12 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "milligram";
+// import "milligram";
+import './header.css';
 
-const Header = () => (
-  <>
-   <span><Link to='Allcars'>All cars serviced in the company</Link></span> 
-   <span><Link to='carHistory'>Repair History</Link></span> 
-  </>
-);
+const Header = () => {
+
+    return (
+        <header>
+            <div className="header">
+                <div className="headerNav">
+                    <Link to="/registerPage">Register</Link>
+          <Link to="/loginPage">Sign in</Link>
+
+                    <Link to='Allcars'>All cars</Link>
+                    <Link to='carHistory'>Repair History</Link>
+
+                </div>
+            </div>
+
+        </header>
+    )
+}
 
 export default Header;
