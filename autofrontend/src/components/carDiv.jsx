@@ -31,6 +31,7 @@ const Cars = () => {
 
   return (
     <div className="flex flex-wrap">
+  
       {cars.length > 0
         ? cars.map((car) => (
             <Car key={car.id} make={car.make} model={car.model} year={car.year} plateNo={car.plateNo} />

@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router';
 // import { useContext } from 'react';
 // import { AuthProvider } from './context/auth';
 import AllCars from './pages/Allcars';
+import Home from './pages/home';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           {/* <Route path="/Login" element={<Login />} /> */}
           {/* <Route path="/Register" element={<Register />} /> */}
           <Route path="/Allcars" element={<AllCars />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
   
