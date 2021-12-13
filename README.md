@@ -1,5 +1,5 @@
 # aVIGIexam
-**VIGI2 exam Task**
+**VIGI2 exam Task**.
 
 The page is dedicated for a car service companies to store information about the cars their are servicing, their service history logs, parts used, owner changes etc.
 
