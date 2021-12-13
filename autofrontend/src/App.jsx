@@ -2,7 +2,7 @@ import React from "react";
 import "./App.scss";
 import { Routes, Route } from 'react-router';
 // import ReactDOM from 'react-dom';
-// import Login from './components/login';
+import LoginPage from './pages/loginPage';
 //import Register from './components/register';
 // import { useContext } from 'react';
 // import { AuthProvider } from './context/auth';
@@ -40,7 +40,7 @@ function App() {
         </div>
     <div>
       <Routes>
-        {/* <Route path="/Login" element={<Login />} /> */}
+        <Route path="/loginPage" element={<LoginPage />} />
         {/* <Route path="/Register" element={<Register />} /> */}
         <Route path="/Allcars" element={<AllCars />} />
         <Route path="/carHistory" element={<Repairs />} />
