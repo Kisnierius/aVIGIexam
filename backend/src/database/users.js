@@ -1,20 +1,22 @@
 const mysql = require('mysql2/promise');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { mysqlConfig, secretKey } = require('../config');
+const { dbConfig, secretKey } = require('../config');
 
 const registerUser = async (email, password) => {
   const salt = bcrypt.genSaltSync(10);
   const hashedPassword = bcrypt.hashSync(password, salt);
-
-  const con = await mysql.createConnection(mysqlConfig);
+  console.log(email,hashedPassword)
+  const con = await mysql.createConnection(dbConfig);
+  console.log("connected to db")
   const [result] = await con.execute('INSERT INTO users(email, password) VALUES(?, ?)', [email, hashedPassword]);
+  console.log(result)
   await con.end();
   return result;
 };
 
 const loginUser = async (email, password) => {
-  const con = await mysql.createConnection(mysqlConfig);
+  const con = await mysql.createConnection(dbConfig);
   const [result] = await con.execute('SELECT * FROM users WHERE email = ?', [email]);
   await con.end();
   console.log(result);

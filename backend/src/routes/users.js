@@ -7,6 +7,7 @@ const router = express.Router();
 const handleRegisterUser = async (req, res) => {
   try {
     const { email, password } = req.body;
+    console.log(email,password)
     const data = await usersEntity.registerUser(email, password);
     res.status(200).json(data);
   } catch (error) {
