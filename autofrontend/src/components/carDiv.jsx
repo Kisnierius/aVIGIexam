@@ -1,5 +1,3 @@
-// import React from 'react';
-
 import React, { useState, useEffect } from "react";
 import "./carDiv.css";
 
@@ -10,7 +8,6 @@ const  Car = ({ make, model, year, plateNo })  => {
       <p>{make}</p>
       <p>{model}</p>
       <p>{year}</p>
-      {/* <p>{id}</p> */}
       
     </div>
   );
@@ -27,16 +24,9 @@ const Cars = () => {
      };
  
 
-//     useEffect(() => {
-//        fetchAllcars();
-//     }, []);
-
 
   useEffect(() => {
       fetchCars();
-    // fetch('http://127.0.0.1:5000/cars')
-    //   .then((response) => response.json())
-    //   .then((data) => setCars(data));
   }, []);
 
   return (
@@ -51,7 +41,3 @@ const Cars = () => {
 };
 
 export default Cars;
-
-///////////
-
-
