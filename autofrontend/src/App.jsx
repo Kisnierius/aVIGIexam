@@ -13,38 +13,37 @@ import Home from './pages/home';
 import "milligram";
 
 // const HeaderLoad = () => {
-  
+
 //   return (
 //       ReactDOM.render(
-          
+
 //           <React.StrictMode>
-              
+
 //             <Header />
 //           </React.StrictMode>,
 //           document.getElementById('root')
 //         )
 //   )
 //   }
-  
+
 //   HeaderLoad();
 
 
 function App() {
 
   return (
-  
 
-      <div >
-        <Routes>
-        {/* <Route path="/" element={<AllCars />} /> */}
-          {/* <Route path="/Login" element={<Login />} /> */}
-          {/* <Route path="/Register" element={<Register />} /> */}
-          <Route path="/Allcars" element={<AllCars />} />
-          <Route path="/carHistory" element={<Repairs />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </div>
-  
+
+    <div >
+      <Routes>
+        {/* <Route path="/Login" element={<Login />} /> */}
+        {/* <Route path="/Register" element={<Register />} /> */}
+        <Route path="/Allcars" element={<AllCars />} />
+        <Route path="/carHistory" element={<Repairs />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
+
   );
 }
 

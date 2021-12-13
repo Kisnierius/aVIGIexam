@@ -4,7 +4,6 @@ import Cars from '../components/carDiv';
 import "milligram";
 // import { Link } from 'react-router-dom';
 
-
 function AllCars() {
 
     return (
@@ -19,4 +18,4 @@ function AllCars() {
     );
 }
 
-    export default AllCars;
+export default AllCars;

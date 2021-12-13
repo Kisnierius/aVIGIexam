@@ -1,5 +1,3 @@
-/////////EXAMPLE
-
 
 // import React, { useState } from "react";
 // import loginImg from "../../login.svg";
