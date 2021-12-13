@@ -48,7 +48,7 @@ let navigate = useNavigate();
 
 
     return (
-      <form
+      <form className="form"
         onSubmit={onClickHandler}>
 
                     <label htmlFor="email">Email</label>
