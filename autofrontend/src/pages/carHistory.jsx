@@ -9,7 +9,7 @@ function Repair({ plateNo, id, create_time, repair_title, repair_comment, part_i
             <h2>{plateNo}</h2>
             <p>Repair ID: {id}</p>
             <p>{create_time}</p>
-            <h1>{repair_title}</h1>
+            <h3>{repair_title}</h3>
             <p>{repair_comment}</p>
             <p>Part ID: {part_id}</p>
             <p>Car ID: {car_id}</p>
@@ -35,6 +35,8 @@ const Repairs = () => {
     }, []);
 
     return (
+        <div>
+        <h2 className="pageTitle">All Repairs history</h2>
         <div className="flex flex-wrap">
 
             {repairs.length > 0
@@ -42,6 +44,7 @@ const Repairs = () => {
                     <Repair plateNo={repair.plateNo} id={repair.id} create_time={repair.create_time} repair_title={repair.repair_title} repair_comment={repair.repair_comment} part_id={repair.part_id} car_id={repair.car_id} email={repair.email} />
                 ))
                 : "Loading..."}
+        </div>
         </div>
     );
 };

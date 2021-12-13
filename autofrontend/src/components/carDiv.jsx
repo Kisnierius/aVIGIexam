@@ -49,12 +49,12 @@ const Repairs = (id) => {
 const Car = ({ make, model, year, plateNo, id }) => {
   return (
     <div className="carDIV">
-      <h2>{plateNo}</h2>
+      <h3>{plateNo}</h3>
       <p>{make}</p>
       <p>{model}</p>
       <p>{year}</p>
       <p>view car history <button
-        onClick={() => Repairs({ id })}
+        onClick={Repairs}
       >{id}</button></p>
 
     </div>
@@ -79,6 +79,8 @@ const Cars = () => {
   }, []);
 
   return (
+    <div>
+      <h2 className="pageTitle">All Cars serviced in the company</h2>
     <div className="flex flex-wrap">
 
       {cars.length > 0
@@ -88,6 +90,7 @@ const Cars = () => {
         ))
         : "Loading..."}
 
+    </div>
     </div>
   );
 };

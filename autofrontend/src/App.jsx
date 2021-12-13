@@ -3,7 +3,7 @@ import "./App.scss";
 import { Routes, Route } from 'react-router';
 // import ReactDOM from 'react-dom';
 import LoginPage from './pages/loginPage';
-//import Register from './components/register';
+import RegisterPage from './pages/registerPage';
 // import { useContext } from 'react';
 // import { AuthProvider } from './context/auth';
 import AllCars from './pages/Allcars';
@@ -41,7 +41,7 @@ function App() {
     <div>
       <Routes>
         <Route path="/loginPage" element={<LoginPage />} />
-        {/* <Route path="/Register" element={<Register />} /> */}
+        <Route path="/registerPage" element={<RegisterPage />} />
         <Route path="/Allcars" element={<AllCars />} />
         <Route path="/carHistory" element={<Repairs />} />
         <Route path="/" element={<Home />} />

@@ -1,16 +1,15 @@
 import React from "react";
 // import ReactDOM from 'react-dom';
-import Login from '../components/login/login';
+import Register from '../components/login/register';
 import "milligram";
-import "./pages.scss";
 
-function LoginPage()
+function RegisterPage()
 {
     return (
       <div>
-       <Login />
+       <Register />
       </div>
     )
   }
   
-  export default LoginPage;
+  export default RegisterPage;
