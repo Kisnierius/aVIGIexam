@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router';
 import AllCars from './pages/Allcars';
 import Repairs from './pages/carHistory';
 import Home from './pages/home';
-// import Header from './components/header';
+import Header from './components/header';
 import "milligram";
 
 // const HeaderLoad = () => {
@@ -32,9 +32,13 @@ import "milligram";
 function App() {
 
   return (
-
-
-    <div >
+    <div>
+<div>
+  <header className="App-header">
+          <Header />
+        </header>
+        </div>
+    <div>
       <Routes>
         {/* <Route path="/Login" element={<Login />} /> */}
         {/* <Route path="/Register" element={<Register />} /> */}
@@ -43,13 +47,9 @@ function App() {
         <Route path="/" element={<Home />} />
       </Routes>
     </div>
-
+    </div>
   );
 }
-
-
-
-
 
 
 export default App;

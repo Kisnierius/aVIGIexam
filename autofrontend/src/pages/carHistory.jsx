@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "milligram";
 import "../components/carDiv.css";
+// import Header from '../components/header';
 
 function Repair({ plateNo, id, create_time, repair_title, repair_comment, part_id, car_id, email }) {
     return (

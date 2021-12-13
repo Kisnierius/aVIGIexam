@@ -7,14 +7,15 @@ import "milligram";
 function AllCars() {
 
     return (
-        ReactDOM.render(
+<div>
+        
 
             <React.StrictMode>
 
                 <Cars />
             </React.StrictMode>,
-            document.getElementById('root')
-        )
+           
+        </div>
     );
 }
 
