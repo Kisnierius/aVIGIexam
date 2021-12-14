@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router';
 // import ReactDOM from 'react-dom';
 import LoginPage from './pages/loginPage';
 import RegisterPage from './pages/registerPage';
+import NewCarPage from './pages/newCarPage';
 // import { useContext } from 'react';
 // import { AuthProvider } from './context/auth';
 import AllCars from './pages/Allcars';
@@ -44,6 +45,7 @@ function App() {
         <Route path="/registerPage" element={<RegisterPage />} />
         <Route path="/Allcars" element={<AllCars />} />
         <Route path="/carHistory" element={<Repairs />} />
+        <Route path="/newCarPage" element={<NewCarPage />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </div>

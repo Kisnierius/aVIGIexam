@@ -53,7 +53,7 @@ const Login = () => {
   };
 
   return (
-<div>
+<div className="form">
     <form onSubmit={onClickHandler}>
 
       <input type="text" name="email" placeholder="email" onChange={(e) =>
@@ -69,7 +69,6 @@ const Login = () => {
       </button>
        
         </form >
-        TEST
         </div>
     )
  }

@@ -14,6 +14,7 @@ const Header = () => {
 
                     <Link to='Allcars'>All cars</Link>
                     <Link to='carHistory'>Repair History</Link>
+                    <Link to='newCarPage'>Add new car</Link>
 
                 </div>
             </div>

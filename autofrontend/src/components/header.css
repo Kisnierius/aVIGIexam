@@ -1,6 +1,15 @@
 .headerNav{
     display: flex;
     align-items: flex-end;
-    max-height: 60px;
-    padding-right: 10px;
+    max-height: 50px;
+    padding: 3px 0;
+    
+}
+
+.headerNav a {
+padding: 10px;
+border-left: solid 1px grey;
+text-align: center;
+justify-content: center;
+
 }
